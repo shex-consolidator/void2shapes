@@ -1,0 +1,59 @@
+prefix void:     <http://rdfs.org/ns/void#>
+prefix dcat:     <http://www.w3.org/ns/dcat#>
+prefix dct:      <http://purl.org/dc/terms/>
+prefix sx:       <http://shex.io/ns/shex#>
+prefix void_ext: <http://ldf.fi/void-ext#>
+prefix xsd:      <http://www.w3.org/2001/XMLSchema#>
+prefix up:       <http://purl.uniprot.org/core/>
+prefix faldo:    <http://biohackathon.org/resource/faldo#>
+prefix sm:       <http://shex.io/ns/shapeMap#>
+prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+
+    ?shape a sx:Shape .
+    ?shape sx:expressions [
+      a sx:TripleConstraint ;
+      sx:predicate ?property ;
+      sx:valueExpr [
+       sx:min ?minDtCardinality ;
+       sx:max ?maxDtCardinality ;
+       sx:datatype ?datatype 
+     ]
+   ] .
+   _:shapeMap a sm:ShapeMap ;
+     sm:associations ( 
+        [ sm:node [
+        sm:focus rdf:subject ;
+        rdf:predicate rdf:type ;
+        sm:object ?class 
+        ] ;
+       sm:shape ?shape
+       ]
+    )
+} WHERE {
+
+    ?ns void:classPartition ?cp .
+    ?cp void:class ?class .
+    BIND(IRI(CONCAT(STR(?ns),'-shape-',MD5(STR(?class)))) AS ?shape) .
+    ?cp void:propertyPartition ?pp .
+    ?pp void:property ?property .
+    BIND(BNODE() AS ?shProperty)
+    OPTIONAL {
+        ?pp void_ext:datatypePartition ?dp .
+        ?dp void_ext:datatype ?datatype .
+    }
+    OPTIONAL {
+        #Todo provide this count in our service description.
+        ?cp void_ext:distinctIRIReferenceSubjects ?distinctSubjectIri .
+        ?pp void:triples ?dtTriples .
+        FILTER(?dtTriples = ?distinctSubjectIri)
+        BIND(1 AS ?minDtCardinality)
+        BIND(1 AS ?maxDtCardinality)
+    }
+    OPTIONAL {
+        ?pp void:classPartition ?ppcp .
+        ?ppcp void:class ?propertyClass .
+    }
+
+}

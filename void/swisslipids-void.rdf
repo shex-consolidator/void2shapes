@@ -1,0 +1,1326 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdf:RDF xmlns="http://www.w3.org/ns/sparql-service-description#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:pav="http://purl.org/pav/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:void="http://rdfs.org/ns/void#" xmlns:void_ext="http://ldf.fi/void-ext#">
+<rdf:Description rdf:about="https://sparql.swisslipids.org/sparql">
+<rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
+<defaultDataset rdf:resource="#_1"/>
+<endpoint rdf:resource="https://sparql.swisslipids.org/sparql"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_CSV"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_JSON"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_TSV"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+<resultFormat rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_XML"/>
+<supportedLanguage rdf:resource="http://www.w3.org/ns/sparql-service-description#SPARQL11Query"/>
+<feature rdf:resource="http://www.w3.org/ns/sparql-service-description#UnionDefaultGraph"/>
+<feature rdf:resource="http://www.w3.org/ns/sparql-service-description#BasicFederatedQuery"/>
+</rdf:Description>
+<rdf:Description rdf:about="#_1">
+<rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Dataset"/>
+<defaultGraph rdf:resource="#_2"/>
+<pav:version>2023_06_28</pav:version>
+<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-28</dcterms:issued>
+<namedGraph rdf:resource="https://sparql.swisslipids.org/swisslipids"/>
+<namedGraph rdf:resource="https://sparql.swisslipids.org/.well-known/void"/>
+<namedGraph rdf:resource="https://sparql.swisslipids.org/.well-known/sparql-examples"/>
+</rdf:Description>
+<rdf:Description rdf:about="#_2">
+<rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20827001</void:triples>
+<dcterms:title>SwissLipids</dcterms:title>
+<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-28</dcterms:issued>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/swisslipids">
+<graph rdf:resource="https://sparql.swisslipids.org/.well-known/void#_graph_swisslipids"/>
+<name rdf:resource="https://sparql.swisslipids.org/swisslipids"/>
+<dcterms:title>SwissLipids swisslipids</dcterms:title>
+<dcterms:creator rdf:resource="https://www.uniprot.org/help/about#SIB"/>
+<dcterms:publisher rdf:resource="https://www.uniprot.org/help/about#SIB"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#_graph_swisslipids">
+<rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20825975</void:triples>
+<dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+<void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</void:classes>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationProperty"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Class"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Ontology"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restriction"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!charge"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!formula"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchi"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchikey"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!smiles"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!CHEMINF_000412"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!hasDbXref"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!type"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!comment"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!label"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!seeAlso"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!subClassOf"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!subPropertyOf"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!equivalentClass"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!imports"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!onProperty"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!someValuesFrom"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!altLabel"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!depiction"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_citation"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_hasPart"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_rank"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_rankPreference"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartAcylTail"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartNAcylTail"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIMEorSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIMEorSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIMEorSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2orSN3"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN3"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2orSN3"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN3"/>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4001694</void:distinctObjects>
+<void_ext:distinctLiterals rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4001694</void_ext:distinctLiterals>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationProperty">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!comment"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!label"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!subPropertyOf"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!comment">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!commentswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!commentswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!label">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!labelswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!labelswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!subPropertyOf">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!subPropertyOfswisslipids!AnnotationProperty"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">51</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!AnnotationPropertyswisslipids!subPropertyOfswisslipids!AnnotationProperty">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!charge"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!formula"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!inchi"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!inchikey"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!smiles"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!CHEMINF_000412"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!hasDbXref"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!label"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!seeAlso"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!subClassOf"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!equivalentClass"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!altLabel"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!depiction"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_citation"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_hasPart"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_rank"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_rankPreference"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartAcylTail"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartNAcylTail"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN3"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN3"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN2PRIME"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN3"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN3"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!charge">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/charge"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!chargeswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">444892</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!chargeswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!formula">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/formula"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!formulaswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779035</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!formulaswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!inchi">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/inchi"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchiswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593209</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchiswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!inchikey">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/inchikey"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchikeyswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593209</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchikeyswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!smiles">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/smiles"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!smilesswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">778936</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!smilesswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!CHEMINF_000412">
+<void:property rdf:resource="http://semanticscience.org/resource/CHEMINF_000412"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!CHEMINF_000412swisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779249</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!CHEMINF_000412swisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!hasDbXref">
+<void:property rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">543146</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!label">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!labelswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779255</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!seeAlso">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18237</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!subClassOf">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!subClassOfswisslipids!Class"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!subClassOfswisslipids!Restriction"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3125701</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!subClassOfswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!subClassOfswisslipids!Restriction">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!equivalentClass">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4279</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!altLabel">
+<void:property rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!altLabelswisslipids!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">776464</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!altLabelswisslipids!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!depiction">
+<void:property rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">778896</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_citation">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_citation"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9940</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_hasPart">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_hasPart"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_hasPartswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_hasPartswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_rank">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_rank"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_rankswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">777956</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_rankswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_rankPreference">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_rankPreference"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_rankPreferenceswisslipids!integer"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_rankPreferenceswisslipids!integer">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartAcylTail">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartAcylTail"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartAcylTailswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">149</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartAcylTailswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartNAcylTail">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartNAcylTail"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartNAcylTailswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45049</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartNAcylTailswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">539443</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">76000</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIMEorSN2"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3990</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIMEorSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3610</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIMEorSN2orSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2orSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1PRIMEorSN2orSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4200</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">210</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4032</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">25428</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3610</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2orSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2orSN3"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN3swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">113556</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN2orSN3swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN3"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN3swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">142146</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN1orSN3swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">629567</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">73856</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2orSN2PRIME"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN2PRIMEswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4419</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN2PRIMEswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2orSN3"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN3swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3519</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN2orSN3swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN3"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN3swisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">179470</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Classswisslipids!SLM_tailpartSN3swisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Ontology">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Ontologyswisslipids!imports"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Ontologyswisslipids!imports">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restriction">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restrictionswisslipids!onProperty"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restrictionswisslipids!someValuesFrom"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restrictionswisslipids!onProperty">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#onProperty"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restrictionswisslipids!someValuesFrom">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#someValuesFrom"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restrictionswisslipids!someValuesFromswisslipids!Class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!Restrictionswisslipids!someValuesFromswisslipids!Class">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!charge">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/charge"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">444892</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">444892</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!formula">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/formula"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779035</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779035</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20524</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchi">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/inchi"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593209</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593209</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">507728</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!inchikey">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/inchikey"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593209</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593209</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">593204</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!smiles">
+<void:property rdf:resource="http://purl.obolibrary.org/obo/chebi/smiles"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">778936</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">778936</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">594258</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!CHEMINF_000412">
+<void:property rdf:resource="http://semanticscience.org/resource/CHEMINF_000412"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779249</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779249</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779249</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!hasDbXref">
+<void:property rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">543146</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">509245</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">534224</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!type">
+<void:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2632134</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2632134</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!comment">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!label">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779257</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779257</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779144</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!seeAlso">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18237</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18237</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18236</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!subClassOf">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3125701</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">779247</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2038549</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!subPropertyOf">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">51</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">23</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!equivalentClass">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4279</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4276</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4278</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!imports">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!onProperty">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#onProperty"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!someValuesFrom">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#someValuesFrom"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">216</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!altLabel">
+<void:property rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">776464</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">776464</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">727572</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!depiction">
+<void:property rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">778896</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">778896</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">578352</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_citation">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_citation"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9940</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3066</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1532</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_hasPart">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_hasPart"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1852844</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">765323</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">216</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_rank">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_rank"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">777956</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">777956</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_rankPreference">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_rankPreference"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartAcylTail">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartAcylTail"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">149</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">149</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">149</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartNAcylTail">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartNAcylTail"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45049</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">45049</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">157</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">539443</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">539443</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">172</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">76000</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">76000</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIMEorSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIMEorSN2"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3990</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3990</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIMEorSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIMEorSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3610</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3610</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1PRIMEorSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1PRIMEorSN2orSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4200</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4200</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">210</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">210</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN1PRIMEorSN2orSN2PRIMEorSN3orSN3PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4032</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2079</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">63</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">25428</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">17616</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">148</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3610</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3610</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2orSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">190</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">19</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN2orSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN2orSN3"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">113556</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">49958</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">143</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN1orSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN1orSN3"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">142146</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">95008</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">131</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">629567</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">629567</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">154</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">73856</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">73856</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">146</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2orSN2PRIME">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2orSN2PRIME"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4419</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4183</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">147</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN2orSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN2orSN3"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3519</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3519</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">51</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#swisslipids!SLM_tailpartSN3">
+<void:property rdf:resource="https://swisslipids.org/rdf/SLM_tailpartSN3"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">179470</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">179470</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">52</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://www.uniprot.org/help/about#SIB">
+<foaf:primaryTopicOf rdf:resource="https://www.sib.swiss"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void">
+<graph rdf:resource="https://sparql.swisslipids.org/.well-known/void#_graph_void"/>
+<name rdf:resource="https://sparql.swisslipids.org/.well-known/void"/>
+<dcterms:title>SwissLipids void</dcterms:title>
+<dcterms:creator rdf:resource="https://www.uniprot.org/help/about#SIB"/>
+<dcterms:publisher rdf:resource="https://www.uniprot.org/help/about#SIB"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#_graph_void">
+<rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">605</void:triples>
+<dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+<void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:classes>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Dataset"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graph"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Service"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!datatype"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!datatypePartition"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctBlankNodeSubjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctIRIReferenceObjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctLiterals"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!creator"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!issued"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!license"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!publisher"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!title"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!version"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!class"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!classPartition"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!classes"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctObjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctSubjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!property"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!propertyPartition"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!triples"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!type"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!defaultDataset"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!defaultGraph"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!endpoint"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!feature"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!graph"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!name"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!namedGraph"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!resultFormat"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!supportedLanguage"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!primaryTopicOf"/>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">102</void:distinctObjects>
+<void_ext:distinctLiterals rdf:datatype="http://www.w3.org/2001/XMLSchema#long">102</void_ext:distinctLiterals>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Dataset">
+<void:class rdf:resource="http://www.w3.org/ns/sparql-service-description#Dataset"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!issued"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!version"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!defaultGraph"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!namedGraph"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!issued">
+<void:property rdf:resource="http://purl.org/dc/terms/issued"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!issuedvoid!date"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!issuedvoid!date">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!version">
+<void:property rdf:resource="http://purl.org/pav/version"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!versionvoid!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!versionvoid!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!defaultGraph">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#defaultGraph"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!defaultGraphvoid!Graph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!defaultGraphvoid!Graph">
+<void:class rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Datasetvoid!namedGraph">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#namedGraph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graph">
+<void:class rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctBlankNodeSubjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctIRIReferenceObjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctLiterals"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!issued"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!license"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!title"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!classPartition"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!classes"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctObjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctSubjects"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!propertyPartition"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!triples"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctBlankNodeSubjects">
+<void:property rdf:resource="http://ldf.fi/void-ext#distinctBlankNodeSubjects"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctBlankNodeSubjectsvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctBlankNodeSubjectsvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctIRIReferenceObjects">
+<void:property rdf:resource="http://ldf.fi/void-ext#distinctIRIReferenceObjects"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctIRIReferenceObjectsvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctIRIReferenceObjectsvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctLiterals">
+<void:property rdf:resource="http://ldf.fi/void-ext#distinctLiterals"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctLiteralsvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctLiteralsvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!issued">
+<void:property rdf:resource="http://purl.org/dc/terms/issued"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!issuedvoid!date"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!license">
+<void:property rdf:resource="http://purl.org/dc/terms/license"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!title">
+<void:property rdf:resource="http://purl.org/dc/terms/title"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!titlevoid!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!titlevoid!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!classPartition">
+<void:property rdf:resource="http://rdfs.org/ns/void#classPartition"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!classes">
+<void:property rdf:resource="http://rdfs.org/ns/void#classes"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!classesvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!classesvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctObjects">
+<void:property rdf:resource="http://rdfs.org/ns/void#distinctObjects"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctObjectsvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctObjectsvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!distinctSubjects">
+<void:property rdf:resource="http://rdfs.org/ns/void#distinctSubjects"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!distinctSubjectsvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctSubjectsvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!propertyPartition">
+<void:property rdf:resource="http://rdfs.org/ns/void#propertyPartition"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">55</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Graphvoid!triples">
+<void:property rdf:resource="http://rdfs.org/ns/void#triples"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!triplesvoid!long"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!triplesvoid!long">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Service">
+<void:class rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!defaultDataset"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!endpoint"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!feature"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!resultFormat"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!supportedLanguage"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!defaultDataset">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#defaultDataset"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!defaultDatasetvoid!Dataset"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!defaultDatasetvoid!Dataset">
+<void:class rdf:resource="http://www.w3.org/ns/sparql-service-description#Dataset"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!endpoint">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#endpoint"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!endpointvoid!Service"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!endpointvoid!Service">
+<void:class rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!feature">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#feature"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!resultFormat">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#resultFormat"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!Servicevoid!supportedLanguage">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#supportedLanguage"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!datatype">
+<void:property rdf:resource="http://ldf.fi/void-ext#datatype"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">14</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">14</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!datatypePartition">
+<void:property rdf:resource="http://ldf.fi/void-ext#datatypePartition"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">18</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">14</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctBlankNodeSubjects">
+<void:property rdf:resource="http://ldf.fi/void-ext#distinctBlankNodeSubjects"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctIRIReferenceObjects">
+<void:property rdf:resource="http://ldf.fi/void-ext#distinctIRIReferenceObjects"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctLiterals">
+<void:property rdf:resource="http://ldf.fi/void-ext#distinctLiterals"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!creator">
+<void:property rdf:resource="http://purl.org/dc/terms/creator"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!issued">
+<void:property rdf:resource="http://purl.org/dc/terms/issued"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!license">
+<void:property rdf:resource="http://purl.org/dc/terms/license"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!publisher">
+<void:property rdf:resource="http://purl.org/dc/terms/publisher"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!title">
+<void:property rdf:resource="http://purl.org/dc/terms/title"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!version">
+<void:property rdf:resource="http://purl.org/pav/version"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!class">
+<void:property rdf:resource="http://rdfs.org/ns/void#class"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">35</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">35</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!classPartition">
+<void:property rdf:resource="http://rdfs.org/ns/void#classPartition"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">35</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">29</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">35</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!classes">
+<void:property rdf:resource="http://rdfs.org/ns/void#classes"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctObjects">
+<void:property rdf:resource="http://rdfs.org/ns/void#distinctObjects"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">58</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">58</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">41</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!distinctSubjects">
+<void:property rdf:resource="http://rdfs.org/ns/void#distinctSubjects"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">56</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">56</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">44</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!property">
+<void:property rdf:resource="http://rdfs.org/ns/void#property"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">111</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">111</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">51</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!propertyPartition">
+<void:property rdf:resource="http://rdfs.org/ns/void#propertyPartition"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">111</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">9</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">111</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!triples">
+<void:property rdf:resource="http://rdfs.org/ns/void#triples"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">115</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">115</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">50</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!type">
+<void:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">6</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!defaultDataset">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#defaultDataset"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!defaultGraph">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#defaultGraph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!endpoint">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#endpoint"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!feature">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#feature"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!graph">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#graph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!name">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#name"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!namedGraph">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#namedGraph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!resultFormat">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#resultFormat"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!supportedLanguage">
+<void:property rdf:resource="http://www.w3.org/ns/sparql-service-description#supportedLanguage"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#void!primaryTopicOf">
+<void:property rdf:resource="http://xmlns.com/foaf/0.1/primaryTopicOf"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/sparql-examples">
+<graph rdf:resource="https://sparql.swisslipids.org/.well-known/void#_graph_sparql-examples"/>
+<name rdf:resource="https://sparql.swisslipids.org/.well-known/sparql-examples"/>
+<dcterms:title>SwissLipids sparql-examples</dcterms:title>
+<dcterms:creator rdf:resource="https://www.uniprot.org/help/about#SIB"/>
+<dcterms:publisher rdf:resource="https://www.uniprot.org/help/about#SIB"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#_graph_sparql-examples">
+<rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#Graph"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">421</void:triples>
+<dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+<void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:classes>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontology"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutable"/>
+<void:classPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutable"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!type"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!comment"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!label"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!imports"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!declare"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!namesapce"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!namespace"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!prefix"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!prefixes"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!select"/>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">217</void:distinctObjects>
+<void_ext:distinctLiterals rdf:datatype="http://www.w3.org/2001/XMLSchema#long">217</void_ext:distinctLiterals>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontology">
+<void:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontologysparql-examples!comment"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontologysparql-examples!imports"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontologysparql-examples!declare"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontologysparql-examples!comment">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!commentsparql-examples!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!commentsparql-examples!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontologysparql-examples!imports">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!Ontologysparql-examples!declare">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#declare"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">63</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutable">
+<void:class rdf:resource="http://www.w3.org/ns/shacl#SPARQLExecutable"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!comment"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!label"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!prefixes"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!select"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!comment">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!commentsparql-examples!HTML"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!commentsparql-examples!HTML">
+<void_ext:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!label">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!labelsparql-examples!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">37</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!labelsparql-examples!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!prefixes">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#prefixes"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLExecutablesparql-examples!select">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#select"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!selectsparql-examples!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!selectsparql-examples!string">
+<void_ext:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutable">
+<void:class rdf:resource="http://www.w3.org/ns/shacl#SPARQLSelectExecutable"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!comment"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!label"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!prefixes"/>
+<void:propertyPartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!select"/>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!comment">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!commentsparql-examples!HTML"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!label">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!labelsparql-examples!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">37</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!prefixes">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#prefixes"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!SPARQLSelectExecutablesparql-examples!select">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#select"/>
+<void_ext:datatypePartition rdf:resource="https://sparql.swisslipids.org/.well-known/void#sparql-examples!selectsparql-examples!string"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!type">
+<void:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">77</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">39</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!comment">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">39</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">39</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">36</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!label">
+<void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">37</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">37</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">34</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!imports">
+<void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!declare">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#declare"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">63</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">63</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!namesapce">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#namesapce"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!namespace">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#namespace"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">63</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">63</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">62</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!prefix">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#prefix"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">64</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">64</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">64</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!prefixes">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#prefixes"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</void:distinctObjects>
+</rdf:Description>
+<rdf:Description rdf:about="https://sparql.swisslipids.org/.well-known/void#sparql-examples!select">
+<void:property rdf:resource="http://www.w3.org/ns/shacl#select"/>
+<void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:triples>
+<void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">38</void:distinctSubjects>
+<void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20</void:distinctObjects>
+</rdf:Description>
+</rdf:RDF>
