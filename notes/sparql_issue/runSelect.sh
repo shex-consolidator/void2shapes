@@ -1,0 +1,1 @@
+sparql --data data.ttl --query query_select.sparql

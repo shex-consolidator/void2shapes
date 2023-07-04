@@ -1,0 +1,8 @@
+@prefix : <http://people.example/> .
+
+:alice :knows :bob, :carol .
+
+:alice :p "Alice", "Alice Foo", "A. Foo" .
+:bob :p "Bob", "Bob Bar", "B. Bar" .
+:carol :p "Carol", "Carol Baz", "C. Baz" .
+:x :p 1,2,3 .

@@ -1,0 +1,12 @@
+PREFIX : <http://people.example/>
+PREFIX : <http://people.example/>
+#SELECT ?y ?minName
+#WHERE {
+#  :alice :knows ?y .
+ # {
+    SELECT ?x (MIN(?y) AS ?minY) (MAX(?y) as ?maxY)
+    WHERE {
+      ?x :p ?y .
+    } GROUP BY ?x
+ # }
+#}

@@ -1,0 +1,29 @@
+prefix : <http://example.org/>
+prefix rdf: 	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?x ?yFirst ?yLast ?currentY ?yNext where {
+    ?x :p ?yFirst .
+    # Bind the first and last values
+    {
+        SELECT ?x (Min(?y) as ?yFirst) (Max(?y) as ?yLast) 
+        WHERE {
+            ?x :p ?y .
+        } GROUP BY ?x 
+    } 
+    
+    # Bind the first and next values except the last
+    {
+        Select ?currentY (Min(?z) as ?yNext)
+        where {
+            ?x :p ?currentY .
+            ?x :p ?z .
+            Filter (STR(?z) > STR(?currentY))
+        } group by ?x ?currentY
+    }
+
+#    BIND(IRI(CONCAT(STR(?x), '-li-', Concat(STR(?yFirst)))) AS ?firstItem)
+#    BIND(IRI(CONCAT(STR(?x), '-li-', Concat(STR(?yCurrent)))) AS ?currentItem)
+    # BIND(IRI(CONCAT(STR(?x), '-va-', Concat(STR(?yCurrent)))) AS ?currentvalue)
+#    BIND(IRI(CONCAT(STR(?x), '-li-', CONCAT(STR(?yNext)))) AS ?nexttItem)
+#	BIND(IRI(CONCAT(STR(?x), '-li-', CONCAT(STR(?yLast)))) AS ?lastItem)
+}

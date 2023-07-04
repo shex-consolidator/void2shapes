@@ -1,0 +1,4 @@
+prefix : <http://example.org/>
+
+# :x :p "a", "b", "c" .
+:x :p 1, 2, 3 .
