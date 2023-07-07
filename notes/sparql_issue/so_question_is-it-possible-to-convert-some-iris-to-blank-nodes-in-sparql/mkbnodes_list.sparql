@@ -1,0 +1,14 @@
+prefix ex: <https://example.com/ns#>
+prefix rdf: 	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?bnode1 rdf:first ?value ;
+          rdf:rest  ?bnode2 .
+  ?s ?p ?o .        
+}
+where {
+  { ?iri1  rdf:first ?value ;
+           rdf:rest  ?iri2 . }
+  BIND(BNODE(str(?iri1)) as ?bnode1)
+  BIND(BNODE(str(?iri2)) as ?bnode2)
+} 

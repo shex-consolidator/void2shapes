@@ -1,0 +1,44 @@
+# Code used to play with a solution for: 
+# https://stackoverflow.com/questions/62030465/sparql-construct-to-generate-rdf-collection-from-group-by-bindings
+prefix ex: <https://example.com/ns#>
+prefix rdf: 	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+ CONSTRUCT {
+ ?evenValue   ex:names ?names .
+ ?names       a         rdf:List ;
+              rdf:first ?minName .
+ ?currentItem a rdf:List ;
+              rdf:first ?currentName ;
+              rdf:rest  ?nextItem .
+ ?lastItem    a rdf:List ;
+              rdf:first ?maxName ;
+              rdf:rest rdf:nil .
+ }
+where {
+   ?x ex:name ?minName .
+   ?x ex:even ?even .
+  {
+    SELECT ?even (MIN(?name) AS ?minName) (MAX(?name) AS ?maxName)
+    WHERE {
+      ?y ex:name ?name .
+      ?y ex:even ?even .
+    } group by ?even
+  }
+  {
+     SELECT ?currentName ?even (Min(?otherName) as ?nextName)
+     WHERE {
+            ?x ex:name ?currentName .
+            ?x ex:even ?even .
+
+            ?y ex:name ?otherName .
+            ?y ex:even ?even2 .
+
+            Filter (STR(?otherName) > STR(?currentName) && ?even = ?even2 )
+     } group by ?currentName ?even
+    }
+  BIND(IRI(CONCAT(STR(?x), '-li-', STR(?minName))) AS ?names)
+  BIND(IRI(CONCAT(STR(?x), '-li-', STR(?currentName))) AS ?currentItem)
+  BIND(IRI(CONCAT(STR(?x), '-li-', STR(?nextName))) AS ?nextItem)
+	BIND(IRI(CONCAT(STR(?x), '-li-', STR(?maxName))) AS ?lastItem)
+  BIND(IRI(CONCAT(STR(?x), '-', STR(?even))) AS ?evenValue)
+} 

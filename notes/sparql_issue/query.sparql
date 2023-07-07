@@ -1,13 +1,16 @@
-prefix : <http://example.org/>
-prefix rdf: 	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix :      <http://example.org/>
+prefix blank: <http://blanknode/>
+prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 CONSTRUCT {
- ?x :p ?firstItem .
+ ?x           :p ?firstItem .
  ?firstItem   rdf:first ?yFirst .
+
  ?currentItem rdf:first ?currentY .
  ?currentItem rdf:rest ?nextItem .
- ?lastItem    rdf:rest rdf:nil .
+
  ?lastItem    rdf:first ?yLast . 
+ ?lastItem    rdf:rest rdf:nil .
 }
 where {
     ?x :p ?yFirst .
@@ -29,8 +32,8 @@ where {
         } group by ?x ?currentY
     }
 
-    BIND(IRI(CONCAT(STR(?x), '-li-', STR(?yFirst))) AS ?firstItem)
-    BIND(IRI(CONCAT(STR(?x), '-li-', STR(?currentY))) AS ?currentItem)
-    BIND(IRI(CONCAT(STR(?x), '-li-', STR(?yNext))) AS ?nextItem)
-	BIND(IRI(CONCAT(STR(?x), '-li-', STR(?yLast))) AS ?lastItem)
+    BIND(IRI(CONCAT(STR(blank:), 'li-', STR(?yFirst))) AS ?firstItem)
+    BIND(IRI(CONCAT(STR(blank:), 'li-', STR(?currentY))) AS ?currentItem)
+    BIND(IRI(CONCAT(STR(blank:), 'li-', STR(?yNext))) AS ?nextItem)
+	BIND(IRI(CONCAT(STR(blank:), 'li-', STR(?yLast))) AS ?lastItem)
 }

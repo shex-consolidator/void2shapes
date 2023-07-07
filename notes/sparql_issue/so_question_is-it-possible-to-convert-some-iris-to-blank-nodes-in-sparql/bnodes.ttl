@@ -1,0 +1,11 @@
+prefix : <http://example.org/>
+prefix blank: <http://example.org/blank>
+prefix rdf: 	 <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+:alice    :friends  blank:b1 .
+blank:b1  rdf:first "Alice" ;
+          rdf:rest  blank:b2  .
+blank:b2  rdf:first "Bob"   ;
+          rdf:rest  blank:b3   .
+blank:b3  rdf:first "Carol" ;
+          rdf:rest  rdf:nil .

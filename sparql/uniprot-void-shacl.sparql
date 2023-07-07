@@ -24,7 +24,7 @@ CONSTRUCT {
 	?currentPropertyClassListItem a rdf:List ;
 		rdf:first ?currentPropertyClassListValue ;
 		rdf:rest ?nextPropertyClassListItem .
-?currentPropertyClassListValue sh:path ?propertyForList ;
+    ?currentPropertyClassListValue sh:path ?propertyForList ;
 			    sh:class ?propertyClass .
 	?lastPropertyClassListItem a rdf:List ;
 		rdf:first ?propertyClassLast;
@@ -96,7 +96,10 @@ CONSTRUCT {
 		}
 		# We bind into stable IRIs.
 		BIND(?property AS ?propertyForList)
+
+		# This one seems unnecessary?...
 		BIND(IRI(CONCAT(STR(?ng), '-or-',MD5(CONCAT(STR(?cp),STR(?pp),STR(?propertyClassFirst))))) AS ?firstPropertyClassOr)
+		
 		BIND(IRI(CONCAT(STR(?ng), '-li-',MD5(CONCAT(STR(?cp),STR(?pp),STR(?propertyClassFirst))))) AS ?firstPropertyClassListItem)
 		BIND(IRI(CONCAT(STR(?ng), '-li-',MD5(CONCAT(STR(?cp),STR(?pp),STR(?propertyClass))))) AS ?currentPropertyClassListItem)
 		BIND(IRI(CONCAT(STR(?ng), '-va-',MD5(CONCAT(STR(?cp),STR(?pp),STR(?propertyClass))))) AS ?currentPropertyClassListValue)
